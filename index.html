@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sales & Revenue Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Sales & Revenue Dashboard</h1>
+        <p>Analyze your sales and revenue data</p>
+    </header>
+
+    <main class="container">
+
+        <section class="cards">
+
+            <div class="card">
+                <h3>Total Sales</h3>
+                <p id="totalSales">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Total Revenue</h3>
+                <p id="totalRevenue">₹0</p>
+            </div>
+
+            <div class="card">
+                <h3>Top Product</h3>
+                <p id="topProduct">-</p>
+            </div>
+
+            <div class="card">
+                <h3>Total Products</h3>
+                <p id="totalProducts">0</p>
+            </div>
+
+        </section>
+
+        <section class="filter-box">
+
+            <label for="categoryFilter">Filter by Category:</label>
+
+            <select id="categoryFilter">
+                <option value="All">All Categories</option>
+                <option value="Electronics">Electronics</option>
+                <option value="Clothing">Clothing</option>
+                <option value="Home">Home</option>
+            </select>
+
+            <br><br>
+
+            <label for="csvFile">Import Sales CSV:</label>
+
+            <input type="file" id="csvFile" accept=".csv">
+
+        </section>
+
+        <section class="chart-box">
+
+            <h2>Monthly Revenue</h2>
+
+            <div id="revenueChart" class="chart"></div>
+
+        </section>
+
+        <section class="table-box">
+
+            <h2>Product Sales</h2>
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Category</th>
+                        <th>Sales</th>
+                        <th>Revenue</th>
+                    </tr>
+                </thead>
+
+                <tbody id="productTable">
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
